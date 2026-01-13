@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Navigation.css"
-import hamburgerIcon from "../../src/assets/hamburger.svg"
-import closeIcon from "../../src/assets/close.svg"
+import hamburgerIcon from "../assets/hamburger.svg"
+import closeIcon from "../assets/close.svg"
 
 function Navigation() {
 
