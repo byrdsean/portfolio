@@ -1,24 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
   --color-eggshell-white: #f6f6f6;
   --color-content-white: #fffffe;
   --color-primary: #68020F;
   --color-accent: #f21137;
   --color-charcoal: #030303;
 
+  --max-width: 1280px;
+  --default-spacing: 20px;
+
   /*--size-sm: 640px;*/
   /*--size-md: 768px;*/
   /*--size-lg: 1024px;*/
   /*--size-xl: 1280px;*/
   /*--size-2xl: 1536px;*/
+
+  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
