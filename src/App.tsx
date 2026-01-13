@@ -1,5 +1,5 @@
 import './App.css'
-import Navigation from "../navigation/navigation.tsx"
+import Navigation from "./navigation/navigation.tsx"
 
 function App() {
 
