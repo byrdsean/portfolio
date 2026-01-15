@@ -2,7 +2,7 @@ import './Hero.css'
 import CallToActionButton from '../buttons/call-to-action/CallToActionButton.tsx'
 import CallToActionTypes from "../buttons/call-to-action/CallToActionTypes.tsx"
 
-function Hero() {
+const Hero = () => {
     return (
         <section className="hero">
             <section className="main-content">

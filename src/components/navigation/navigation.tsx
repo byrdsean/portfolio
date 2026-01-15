@@ -3,15 +3,15 @@ import "./Navigation.css"
 import hamburgerIcon from "../../assets/icons/hamburger.svg"
 import closeIcon from "../../assets/icons/close.svg"
 
-function Navigation() {
+const Navigation = ()=> {
 
     const [showNavList, setShowNavList] = useState(false)
     
-    function displayNavList() {
+    const displayNavList = ()=> {
         setShowNavList(true);
     }
 
-    function hideNavList() {
+    const hideNavList = () => {
         setShowNavList(false);
     }
 
