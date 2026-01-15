@@ -1,0 +1,35 @@
+.ctaBtn {
+    font-size: 1.5rem;
+    height: var(--default-btn-height);
+    width: var(--default-btn-width);
+    border: 1px solid var(--color-charcoal);
+    background-color: var(--color-content-white);
+    color: var(--color-charcoal);
+    transition: background-color 0.15s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    &:active {
+        background-color: var(--color-hover-outlined);
+    }
+
+    img {
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    &.filled {
+        background-color: var(--color-accent);
+        color: var(--color-content-white);
+
+        &:active {
+            background-color: var(--color-hover-filled);
+        }
+    }
+}
