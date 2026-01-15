@@ -1,4 +1,7 @@
-.main-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
+.mainSection {
+    @media(width <= 768px) {
+        &.displayNav {
+            display: none;
+        }
+    }
 }
