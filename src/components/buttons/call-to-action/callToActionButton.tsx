@@ -1,6 +1,6 @@
 import {type FC} from "react";
 import './CallToActionButton.css'
-import CallToActionTypes from "./CallToActionTypes";
+import CallToActionTypes from "./callToActionTypes.tsx";
 
 interface CallToActionButtonProps {
     text: string;

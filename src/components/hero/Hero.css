@@ -1,6 +1,5 @@
 .hero {
     width: 100%;
-    background-color: var(--color-eggshell-white);
 
     .main-content {
         max-width: var(--max-width);

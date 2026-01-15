@@ -1,6 +1,6 @@
 import './Hero.css'
-import CallToActionButton from '../buttons/call-to-action/CallToActionButton.tsx'
-import CallToActionTypes from "../buttons/call-to-action/CallToActionTypes.tsx"
+import CallToActionButton from '../buttons/call-to-action/callToActionButton.tsx'
+import CallToActionTypes from "../buttons/call-to-action/callToActionTypes.tsx"
 
 const Hero = () => {
     return (

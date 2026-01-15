@@ -1,4 +1,9 @@
 .mainSection {
+
+    > * {
+        margin-bottom: 4rem;
+    }
+
     @media(width <= 768px) {
         &.displayNav {
             display: none;

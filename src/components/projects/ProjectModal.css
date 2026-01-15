@@ -1,0 +1,45 @@
+.projectModal {
+    --image-sqaure-size: 360px;
+
+    max-width: 400px;
+    width: 100%;
+    padding: var(--default-spacing);
+    background-color: var(--color-content-white);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-spacing);
+    box-shadow: 4px 4px 4px var(--color-shadow);
+
+    img {
+        border-radius: 25px;
+        max-width: var(--image-sqaure-size);
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1rem;
+        color: var(--color-primary);
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .tag {
+        border: 2px solid var(--color-charcoal);
+        border-radius: 25px;
+        padding: 0 var(--default-spacing);
+        background: var(--color-accent);
+        color: var(--color-content-white);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
