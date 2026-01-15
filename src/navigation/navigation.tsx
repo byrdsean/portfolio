@@ -19,7 +19,7 @@ function Navigation() {
         <section className="container">
             <div className="navigation">
                 <div className="logo">
-                    <a href="/">Sean Byrd</a>
+                    <a href="/portfolio">Sean Byrd</a>
                 </div>
                 <div className={`links ${showNavList ? "show" : ""}`}>
                     <div className="close-navigation" onClick={hideNavList}>
@@ -27,19 +27,19 @@ function Navigation() {
                     </div>
                     <ul className="link-list">
                         <li>
-                            <a href="/">About Me</a>
+                            <a href="/portfolio">About Me</a>
                         </li>
                         <li>
-                            <a href="/">Skills and Services</a>
+                            <a href="/portfolio">Skills and Services</a>
                         </li>
                         <li>
-                            <a href="/">Projects</a>
+                            <a href="/portfolio">Projects</a>
                         </li>
                         <li>
-                            <a href="/">Testimonials</a>
+                            <a href="/portfolio">Testimonials</a>
                         </li>
                         <li>
-                            <a href="/">Contact</a>
+                            <a href="/portfolio">Contact</a>
                         </li>
                     </ul>
                 </div>
