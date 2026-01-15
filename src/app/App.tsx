@@ -1,7 +1,8 @@
+import {useState} from "react";
 import './App.css'
 import Navigation from "../components/navigation/navigation.tsx"
 import Hero from "../components/hero/hero.tsx"
-import {useState} from "react";
+import Projects from "../components/projects/projects.tsx";
 
 const App = ()=> {
 
@@ -20,6 +21,7 @@ const App = ()=> {
             <Navigation showNavList={showNavList} displayNavList={displayNavList} hideNavList={hideNavList} />
             <section className={`mainSection ${showNavList ? "displayNav" : ""}`}>
                 <Hero />
+                <Projects />
             </section>
         </>
     )
