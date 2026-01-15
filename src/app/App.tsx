@@ -1,14 +1,12 @@
-import './App.css'
-import Navigation from "../navigation/navigation.tsx"
+import Navigation from "../components/navigation/navigation.tsx"
+import Hero from "../components/hero/hero.tsx"
 
 function App() {
 
   return (
       <>
         <Navigation />
-        <section className="main-content">
-          main content
-        </section>
+        <Hero />
       </>
   )
 }

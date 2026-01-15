@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Navigation.css"
-import hamburgerIcon from "../assets/hamburger.svg"
-import closeIcon from "../assets/close.svg"
+import hamburgerIcon from "../../assets/icons/hamburger.svg"
+import closeIcon from "../../assets/icons/close.svg"
 
 function Navigation() {
 
@@ -16,10 +16,10 @@ function Navigation() {
     }
 
     return (
-        <section className="container">
+        <section className="navigation-container">
             <div className="navigation">
                 <div className="logo">
-                    <a href="/portfolio">Sean Byrd</a>
+                    <a href="/">Sean Byrd</a>
                 </div>
                 <div className={`links ${showNavList ? "show" : ""}`}>
                     <div className="close-navigation" onClick={hideNavList}>
@@ -27,19 +27,19 @@ function Navigation() {
                     </div>
                     <ul className="link-list">
                         <li>
-                            <a href="/portfolio">About Me</a>
+                            <a href="/">About Me</a>
                         </li>
                         <li>
-                            <a href="/portfolio">Skills and Services</a>
+                            <a href="/">Skills and Services</a>
                         </li>
                         <li>
-                            <a href="/portfolio">Projects</a>
+                            <a href="/">Projects</a>
                         </li>
                         <li>
-                            <a href="/portfolio">Testimonials</a>
+                            <a href="/">Testimonials</a>
                         </li>
                         <li>
-                            <a href="/portfolio">Contact</a>
+                            <a href="/">Contact</a>
                         </li>
                     </ul>
                 </div>
