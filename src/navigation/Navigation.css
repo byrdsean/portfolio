@@ -65,7 +65,8 @@
         top: 0;
         width: 100%;
         background-color: var(--color-content-white);
-        font-size: 4rem;
+        font-size: 2rem;
+        height: 100vh;
 
         &.show {
             display: block;
