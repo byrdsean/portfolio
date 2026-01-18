@@ -3,6 +3,7 @@ import './App.css'
 import Navigation from "../components/navigation/navigation.tsx"
 import Hero from "../components/hero/hero.tsx"
 import Projects from "../components/projects/projects.tsx";
+import Testimonials from "../components/testimonials/testimonials.tsx";
 
 const App = ()=> {
 
@@ -22,6 +23,7 @@ const App = ()=> {
             <section className={`mainSection ${showNavList ? "displayNav" : ""}`}>
                 <Hero />
                 <Projects />
+                <Testimonials />
             </section>
         </>
     )
