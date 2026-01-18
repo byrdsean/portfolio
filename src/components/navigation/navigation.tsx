@@ -36,7 +36,7 @@ const Navigation:FC<NavigationProps> =
                             <a href="#projects">Projects</a>
                         </li>
                         <li>
-                            <a href="/">Testimonials</a>
+                            <a href="#testimonials">Testimonials</a>
                         </li>
                         <li>
                             <a href="/">Contact</a>

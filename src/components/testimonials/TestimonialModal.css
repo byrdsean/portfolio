@@ -1,0 +1,68 @@
+.testimonialModal {
+    max-width: 610px;
+    width: 100%;
+    padding: var(--default-spacing);
+    background-color: var(--color-content-white);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing) * 2);
+    box-shadow: 4px 4px 4px var(--color-shadow);
+
+    h2 {
+        font-size: 1rem;
+        color: var(--color-primary);
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 2rem;
+
+        &::before {
+            content: url('/src/assets/icons/double-quote-open.svg');
+            width: 1.25rem;
+            height: 1.25rem;
+            display: block;
+            margin: 0 0 var(--default-spacing) var(--default-spacing);
+        }
+
+        &::after {
+            content: url('/src/assets/icons/double-quote-close.svg');
+            width: 1.25rem;
+            height: 1.25rem;
+            display: block;
+            margin: 0 var(--default-spacing) 0 auto;
+        }
+    }
+
+    .attestant {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 20px;
+
+        h2 {
+            font-size: 2rem;
+            color: var(--color-charcoal);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: end;
+        }
+
+        .profilePic {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            border: 1px solid var(--color-charcoal);
+        }
+    }
+}
