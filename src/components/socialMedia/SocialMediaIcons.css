@@ -1,0 +1,26 @@
+.socialMediaIcons {
+    --icon-size: 2rem;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: var(--default-spacing)
+    }
+
+    li {
+        list-style: none;
+    }
+
+    img {
+        max-height: var(--icon-size);
+        height: 100%;
+        max-width: var(--icon-size);
+        width: 100%;
+    }
+
+    @media(width <= 768px) {
+        ul {
+            justify-content: center;
+        }
+    }
+}

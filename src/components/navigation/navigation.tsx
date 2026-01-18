@@ -27,19 +27,19 @@ const Navigation:FC<NavigationProps> =
                     </div>
                     <ul className="link-list">
                         <li>
-                            <a href="/">About Me</a>
+                            <a href={"/portfolio"}>About Me</a>
                         </li>
                         <li>
-                            <a href="/">Skills and Services</a>
+                            <a href={"/portfolio"}>Skills and Services</a>
                         </li>
                         <li>
-                            <a href="#projects">Projects</a>
+                            <a href={"/portfolio#projects"}>Projects</a>
                         </li>
                         <li>
-                            <a href="#testimonials">Testimonials</a>
+                            <a href={"/portfolio#testimonials"}>Testimonials</a>
                         </li>
                         <li>
-                            <a href="/">Contact</a>
+                            <a href={"/portfolio"}>Contact</a>
                         </li>
                     </ul>
                 </div>
