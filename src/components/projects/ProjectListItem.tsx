@@ -1,6 +1,11 @@
 interface ProjectListItem {
-    text: string;
+    id: number;
+    title: string;
     link: string;
+    img: string;
+    alt: string;
+    description?: string;
+    tags?: string[]
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

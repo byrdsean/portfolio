@@ -6,13 +6,15 @@ interface CallToActionButtonProps {
     text: string;
     type?: string;
     iconName?: string;
+    onClick: () => void;
 }
 
 const CallToActionButton:FC<CallToActionButtonProps> = 
 ({
     text,
     type = CallToActionTypes.outlined,
-    iconName
+    iconName,
+    onClick
 }) => {
 
     const FILLED_BUTTON_CLASS_NAME = "filled";
@@ -30,7 +32,7 @@ const CallToActionButton:FC<CallToActionButtonProps> =
 
     const iconPath = setIconPath(iconName);
 
-    return <button className={`ctaBtn ${setButtonTypeClass()}`}>
+    return <button className={`ctaBtn ${setButtonTypeClass()}`} onClick={() => {onClick()}}>
         {text} {iconPath && (<img src={iconPath} alt="button-icon" />)}
     </button>
 }
