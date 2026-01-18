@@ -14,8 +14,8 @@ const Hero = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div className="cta-group">
-                        <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" type={CallToActionTypes.filled} />
-                        <CallToActionButton text="View Resume" iconName="document-text.svg" />
+                        <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={() => {}} type={CallToActionTypes.filled} />
+                        <CallToActionButton text="View Resume" iconName="document-text.svg" onClick={() => {}} />
                     </div>
                 </div>
                 <div className="profile-img">

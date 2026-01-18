@@ -22,4 +22,8 @@
         justify-content: center;
         gap: var(--default-spacing);
     }
+
+    .loadMoreContainer {
+        margin: 0 auto;
+    }
 }
