@@ -3,7 +3,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url(/portfolio/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+  src: url(/src/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
 }
 
 /* Italic (Regular Italic) */
@@ -11,7 +11,7 @@
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 400;
-  src: url(/portfolio/fonts/Poppins/Poppins-Italic.ttf) format('truetype');
+  src: url(/src/assets/fonts/Poppins/Poppins-Italic.ttf) format('truetype');
 }
 
 /* SemiBold */
@@ -19,7 +19,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url(/portfolio/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
+  src: url(/src/assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
 }
 
 /* Bold */
@@ -27,7 +27,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url(/portfolio/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+  src: url(/src/assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
 }
 
 :root {
