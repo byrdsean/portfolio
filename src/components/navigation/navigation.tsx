@@ -1,20 +1,20 @@
-import { type FC } from "react"
+import {useState} from "react"
 import "./Navigation.css"
 import hamburgerIcon from "../../assets/icons/hamburger.svg"
 import closeIcon from "../../assets/icons/close.svg"
 
-interface NavigationProps {
-    showNavList: boolean,
-    hideNavList: () => void,
-    displayNavList: () => void,
-}
+const Navigation = ()=> {
 
-const Navigation:FC<NavigationProps> =
-({
-    showNavList,
-    hideNavList,
-    displayNavList
-})=> {
+    const [showNavList, setShowNavList] = useState(false)
+
+    const displayNavList = ()=> {
+        setShowNavList(true);
+    }
+
+    const hideNavList = () => {
+        setShowNavList(false);
+    }
+
     return (
         <section className="navigation-container">
             <div className="navigation">

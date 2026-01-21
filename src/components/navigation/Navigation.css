@@ -63,10 +63,10 @@
     @media(width <= 768px) {
         .links {
             display: none;
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
-            width: 100%;
+            width: 75%;
             background-color: var(--color-content-white);
             font-size: 2rem;
             padding: 0;
