@@ -27,19 +27,19 @@ const Navigation:FC<NavigationProps> =
                     </div>
                     <ul className="link-list">
                         <li>
-                            <a href={"/portfolio"} onClick={hideNavList}>About Me</a>
+                            <a href={"#about-me"} onClick={hideNavList}>About Me</a>
                         </li>
                         <li>
-                            <a href={"/portfolio"} onClick={hideNavList}>Skills and Services</a>
+                            <a href={"#skills-and-services"} onClick={hideNavList}>Skills and Services</a>
                         </li>
                         <li>
-                            <a href={"/portfolio#projects"} onClick={hideNavList}>Projects</a>
+                            <a href={"#projects"} onClick={hideNavList}>Projects</a>
                         </li>
                         <li>
-                            <a href={"/portfolio#testimonials"} onClick={hideNavList}>Testimonials</a>
+                            <a href={"#testimonials"} onClick={hideNavList}>Testimonials</a>
                         </li>
                         <li>
-                            <a href={"/portfolio"} onClick={hideNavList}>Contact</a>
+                            <a href={"#contact"} onClick={hideNavList}>Contact</a>
                         </li>
                     </ul>
                 </div>
