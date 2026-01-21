@@ -1,5 +1,6 @@
 import './Footer.css'
 import SocialMediaIcons from "../socialMedia/socialMediaIcons.tsx";
+import {navigationLinks} from "../navigation/navigationLinkList.tsx";
 
 const Footer = () => {
 
@@ -19,21 +20,11 @@ const Footer = () => {
                     <div className="navigation">
                         <h2>Navigation</h2>
                         <ul>
-                            <li>
-                                <a href={"/portfolio"}>About Me</a>
-                            </li>
-                            <li>
-                                <a href={"/portfolio"}>Skills and Services</a>
-                            </li>
-                            <li>
-                                <a href={"/portfolio#projects"}>Projects</a>
-                            </li>
-                            <li>
-                                <a href={"/portfolio#testimonials"}>Testimonials</a>
-                            </li>
-                            <li>
-                                <a href={"/portfolio"}>Contact</a>
-                            </li>
+                            {navigationLinks.links.map((link, index) => (
+                                <li key={index}>
+                                    <a href={link.href}>{link.text}</a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="contact">
