@@ -68,6 +68,10 @@
 
         .get-in-touch, .navigation, .contact {
             text-align: center;
+
+            ul {
+                align-items: center;
+            }
         }
 
         .get-in-touch {
