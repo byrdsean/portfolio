@@ -37,6 +37,7 @@ const Navigation = ()=> {
                 <div className="hamburger-menu" onClick={displayNavList}>
                     <img src={hamburgerIcon} alt="Navigation Menu" />
                 </div>
+                <div className={`content-overlay ${showNavList ? "show" : ""}`}></div>
             </div>
         </section>
     )
