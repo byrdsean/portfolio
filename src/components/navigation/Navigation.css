@@ -60,6 +60,17 @@
         display: none;
     }
 
+    .content-overlay {
+        background-color: var(--color-charcoal);
+        opacity: 75%;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
     @media(width <= 768px) {
         .links {
             display: none;
@@ -77,6 +88,17 @@
                 animation-name: slideInNav;
                 animation-duration: 0.25s;
                 animation-timing-function: linear;
+                z-index: 2;
+            }
+        }
+
+        .content-overlay {
+            &.show {
+                display: block;
+                animation-name: fadeIn;
+                animation-duration: 0.25s;
+                animation-timing-function: linear;
+                z-index: 1;
             }
         }
 
@@ -116,5 +138,14 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: (75%);
     }
 }
