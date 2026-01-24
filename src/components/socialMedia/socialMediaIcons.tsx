@@ -40,7 +40,7 @@ const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
     }, [showWhiteIcons]);
 
     return (
-            <div className="socialMediaIcons">
+        <div className="socialMediaIcons">
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/seanbyrd/" target="_blank">
