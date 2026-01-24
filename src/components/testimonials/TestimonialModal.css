@@ -41,6 +41,7 @@
         flex-direction: row;
         justify-content: end;
         gap: 20px;
+        align-items: center;
 
         h2 {
             font-size: 2rem;
