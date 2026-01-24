@@ -13,8 +13,8 @@ const App = ()=> {
             <Navigation />
             <section className={"mainSection"}>
                 <Routes>
-                    <Route path={"/portfolio/"} element={<Home />} />
-                    <Route path={"/portfolio/projects/:slug"} element={<ProjectDescription />} />
+                    <Route path={"/"} element={<Home />} />
+                    <Route path={"/projects/:slug"} element={<ProjectDescription />} />
                     <Route path={"*"} element={<NotFound />} />
                 </Routes>
             </section>
