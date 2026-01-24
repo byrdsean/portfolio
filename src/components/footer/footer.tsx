@@ -1,6 +1,7 @@
 import './Footer.css'
 import SocialMediaIcons from "../socialMedia/socialMediaIcons.tsx";
 import {navigationLinks} from "../navigation/navigationLinkList.tsx";
+import mapPinWhite from "../../assets/icons/map-pin-white.svg";
 
 const Footer = () => {
 
@@ -33,7 +34,10 @@ const Footer = () => {
                             <li>
                                 <a href={"mailto:byrd.sean1015@gmail.com?subject=Sean Byrd's Portfolio - Let's Connect"}>byrd.sean1015@gmail.com</a>
                             </li>
-                            <li>New York, NY</li>
+                            <li>
+                                <img src={mapPinWhite} alt="map-pin" />
+                                <span>New York, NY</span>
+                            </li>
                         </ul>
                     </div>
                 </section>
