@@ -4,10 +4,6 @@
         margin-bottom: 4rem;
     }
 
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
     @media(width <= 768px) {
         &.displayNav {
             display: none;
