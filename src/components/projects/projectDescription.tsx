@@ -21,7 +21,7 @@ const ProjectDescription = () => {
 
         const project = projects.find(project => isProjectUrl(project.url));
         if (!project) {
-            navigate("/not-found");
+            navigate("/not-found", { replace: true });
             return;
         }
 
