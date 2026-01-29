@@ -3,10 +3,12 @@ import remarkGfm from 'remark-gfm';
 import { useCallback, useEffect, useState } from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import useProjects from "./useProjects.tsx";
+import spinner from "../../assets/icons/spinner.svg"
 
 const ProjectDescription = () => {
     const { url } = useParams()
-    const { projects, isLoading } = useProjects();
+    const { projects, isLoading: isLoadingProjects } = useProjects();
+    const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState<string>("");
     const navigate = useNavigate();
 
@@ -28,17 +30,21 @@ const ProjectDescription = () => {
             .then(data => data.text())
             .then(text => setContent(text))
             .catch(error => console.error(`Error retrieving project data: ${error}`, error))
+            .finally(() => setIsLoading(false));
     }, [navigate, url, projects, isProjectUrl]);
 
     useEffect(() => {
-        if (!isLoading) {
+        if (!isLoadingProjects) {
             loadProject();
         }
-    }, [isLoading, loadProject]);
+    }, [isLoadingProjects, loadProject]);
 
-    return <Markdown remarkPlugins={[remarkGfm]}>
-        {content}
-    </Markdown>
+    return <>
+        {isLoading && <img src={spinner} alt={"Loading..."} /> }
+        {!isLoading && <Markdown remarkPlugins={[remarkGfm]}>
+            {content}
+        </Markdown>}
+    </>
 }
 
 export default ProjectDescription;
