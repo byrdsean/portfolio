@@ -4,6 +4,8 @@ interface ProjectListItem {
     link: string;
     img: string;
     alt: string;
+    url: string;
+    source: string;
     description?: string;
     tags?: string[]
 }
