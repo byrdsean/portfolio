@@ -8,7 +8,7 @@
             "alt": "test",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "tags": ["HTML", "Javascript", "CSS", "Kotlin", "C Sharp"],
-            "url": "8189-project-1",
+            "url": "project-1",
             "source": "project1.md"
         },
         {
@@ -19,7 +19,7 @@
             "alt": "test",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "tags": ["HTML", "Javascript", "CSS", "Kotlin", "C Sharp"],
-            "url": "4488-project-2",
+            "url": "project-2",
             "source": "project2.md"
         },
         {
