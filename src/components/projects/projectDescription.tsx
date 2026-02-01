@@ -70,7 +70,7 @@ const ProjectDescription = () => {
                         </ul>
                         <section className="header">
                             {project && <h1>{project.title}</h1>}
-                            <SocialMediaIcons showWhiteIcons={false} label={"Share"} showSmallIcons={true} />
+                            <SocialMediaIcons showWhiteIcons={false} label={"Connect"} showSmallIcons={true} />
                         </section>
                         <section className={"article"}>
                             <Markdown remarkPlugins={[remarkGfm]}>
