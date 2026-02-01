@@ -1,0 +1,125 @@
+.project-description {
+    margin-bottom: 0;
+
+    .main-content {
+        max-width: var(--max-width);
+        padding: var(--default-spacing);
+        margin: 0 auto;
+    }
+
+    .header {
+        margin-bottom: 1rem;
+
+        > * {
+            margin-bottom: var(--default-spacing);
+
+            &:last-child {
+                margin-bottom: calc(var(--default-spacing) * 2);
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-primary);
+        width: fit-content;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .spinner {
+        max-width: 100px;
+        width: 100%;
+        margin: 0 auto;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    a {
+        color: var(--color-primary);
+    }
+
+    .nav-links {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: calc(var(--default-spacing) * 0.5);
+        margin-bottom: calc(var(--default-spacing) * 1.5);
+
+        li {
+            &::after {
+                content: ">";
+                margin-left: calc(var(--default-spacing) * 0.5);
+            }
+
+            &:last-child {
+                &::after {
+                    content: "";
+                }
+            }
+        }
+    }
+
+    .article {
+        > * {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: var(--default-spacing);
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table, tr, th, td {
+            border: 1px solid var(--color-charcoal);
+            border-collapse: collapse;
+            padding: calc(var(--default-spacing) * 0.5);
+        }
+
+        thead {
+            tr {
+                background-color: var(--color-primary);
+                color: var(--color-content-white);
+            }
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background-color: var(--color-gray-light);
+            }
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

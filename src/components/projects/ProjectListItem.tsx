@@ -1,7 +1,6 @@
 interface ProjectListItem {
     id: number;
     title: string;
-    link: string;
     img: string;
     alt: string;
     url: string;

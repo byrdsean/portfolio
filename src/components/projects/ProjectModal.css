@@ -29,25 +29,4 @@
         font-size: 1rem;
         color: var(--color-primary);
     }
-
-    ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .tag {
-        border: 2px solid var(--color-charcoal);
-        border-radius: 25px;
-        padding: 0 var(--default-spacing);
-        background: var(--color-accent);
-        color: var(--color-content-white);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
