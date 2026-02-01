@@ -16,7 +16,7 @@ const Footer = () => {
                     <div className="get-in-touch">
                         <h1>Get In Touch!</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <SocialMediaIcons showWhiteIcons={true}/>
+                        <SocialMediaIcons showWhiteIcons={true} showSmallIcons={false}/>
                     </div>
                     <div className="navigation">
                         <h2>Navigation</h2>

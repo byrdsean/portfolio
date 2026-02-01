@@ -1,12 +1,12 @@
 import type {FC, JSX} from 'react';
 import './ProjectModal.css'
 import type ProjectListItem from "./ProjectListItem.tsx";
+import TagList from "./TagList.tsx";
 
 const ProjectModal:FC<ProjectListItem> =
 ({
     id,
     title,
-    link,
     img: image,
     alt,
     url,
@@ -41,16 +41,7 @@ const ProjectModal:FC<ProjectListItem> =
             )}
 
             {description && <p>{description}</p>}
-            {
-                tags && tags.length > 0 &&
-                <ul>
-                    {tags.map((tag, index) =>
-                        <li key={index}>
-                            <a href={link} className="tag">{tag}</a>
-                        </li>
-                    )}
-                </ul>
-            }
+            <TagList tags={tags} />
         </div>
     )
 }

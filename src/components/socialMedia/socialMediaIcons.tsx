@@ -14,10 +14,14 @@ import envelopeIcon from "../../assets/icons/envelope.svg";
 
 interface SocialMediaIconsProps {
     showWhiteIcons: boolean;
+    showSmallIcons: boolean;
+    label?: string;
 }
 
 const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
-    showWhiteIcons
+    showWhiteIcons,
+    showSmallIcons,
+    label
 }) => {
 
     const [icons, setIcons] = useState<Icons>({
@@ -40,7 +44,8 @@ const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
     }, [showWhiteIcons]);
 
     return (
-        <div className="socialMediaIcons">
+        <div className={`socialMediaIcons ${showSmallIcons ? "small" : ""}`}>
+            {label && <span>{label}</span>}
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/seanbyrd/" target="_blank">

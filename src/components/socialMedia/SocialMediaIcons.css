@@ -1,10 +1,24 @@
 .socialMediaIcons {
     --icon-size: 2rem;
+    --icon-size-small: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--default-spacing);
+    align-items: center;
+
+    span {
+        font-weight: bold;
+
+        &::after {
+            content: ':';
+        }
+    }
 
     ul {
         display: flex;
         flex-direction: row;
-        gap: var(--default-spacing)
+        gap: var(--default-spacing);
     }
 
     li {
@@ -16,6 +30,13 @@
         height: 100%;
         max-width: var(--icon-size);
         width: 100%;
+    }
+
+    &.small {
+        img {
+            max-height: var(--icon-size-small);
+            max-width: var(--icon-size-small);
+        }
     }
 
     @media(width <= 768px) {
