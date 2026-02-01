@@ -74,8 +74,8 @@
             }
         }
 
-        .get-in-touch {
-            padding-bottom: calc(var(--default-spacing) * 2);
+        .socialMediaIcons {
+            margin: 0 auto;
         }
     }
 }
