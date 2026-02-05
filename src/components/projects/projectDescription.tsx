@@ -4,9 +4,10 @@ import remarkGfm from 'remark-gfm';
 import {useCallback, useEffect, useState} from 'react'
 import {useParams, useNavigate} from "react-router-dom";
 import useProjects from "./useProjects.tsx";
+import TagList from "./TagList.tsx";
 import spinner from "../../assets/icons/spinner.svg"
 import type ProjectListItem from './ProjectListItem.tsx';
-import TagList from "./TagList.tsx";
+import {type NavigationLink, navigationLinks} from "../navigation/navigationLinkList.tsx";
 
 const ProjectDescription = () => {
     const {url} = useParams()
@@ -17,6 +18,12 @@ const ProjectDescription = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState<string>("");
+
+    const [projectLink, setProjectLink] = useState<NavigationLink | undefined>();
+
+    const getProjectLink = useCallback(() => {
+        setProjectLink(navigationLinks.links.find(link => link.text === "Projects"));
+    }, []);
 
     const isProjectUrl = useCallback((projectUrl: string): boolean => {
         return projectUrl.trim().toLowerCase() === url?.trim().toLowerCase()
@@ -52,7 +59,10 @@ const ProjectDescription = () => {
         if (!isLoadingProjects) {
             loadProject();
         }
-    }, [isLoadingProjects, loadProject]);
+
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        getProjectLink();
+    }, [isLoadingProjects, getProjectLink, loadProject]);
 
     return (
         <section className="project-description">
@@ -60,13 +70,11 @@ const ProjectDescription = () => {
                 {isLoading && <img src={spinner} alt={"Loading..."} className="spinner"/>}
                 {!isLoading && <>
                     <>
-                        <ul className="nav-links">
-                            <li>
-                                <a href={import.meta.env.BASE_URL}>Home</a>
-                            </li>
-                            <li>Projects</li>
-                            <li>{project?.title}</li>
-                        </ul>
+                        {projectLink && (
+                            <section className="nav-links">
+                                &lt; <a href={projectLink.href}>Back to {projectLink.text}</a>
+                            </section>
+                        )}
                         <section className="header">
                             {project && <h1>{project.title}</h1>}
                         </section>
