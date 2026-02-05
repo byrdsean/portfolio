@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm';
 import {useCallback, useEffect, useState} from 'react'
 import {useParams, useNavigate} from "react-router-dom";
 import useProjects from "./useProjects.tsx";
-import TagList from "./TagList.tsx";
+import TagList from "../tagList/TagList.tsx";
 import spinner from "../../assets/icons/spinner.svg"
 import type ProjectListItem from './ProjectListItem.tsx';
 import {type NavigationLink, navigationLinks} from "../navigation/navigationLinkList.tsx";
