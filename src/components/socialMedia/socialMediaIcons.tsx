@@ -11,17 +11,10 @@ import linkedInIcon from "../../assets/icons/linkedin.svg";
 import githubIcon from "../../assets/icons/github.svg";
 import codepenIcon from "../../assets/icons/codepen.svg";
 import envelopeIcon from "../../assets/icons/envelope.svg";
-
-interface SocialMediaIconsProps {
-    showWhiteIcons: boolean;
-    showSmallIcons: boolean;
-    label?: string;
-}
+import type SocialMediaIconsProps from "./SocialMediaIconsProps.tsx";
 
 const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
     showWhiteIcons,
-    showSmallIcons,
-    label
 }) => {
 
     const [icons, setIcons] = useState<Icons>({
@@ -44,8 +37,7 @@ const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
     }, [showWhiteIcons]);
 
     return (
-        <div className={`socialMediaIcons ${showSmallIcons ? "small" : ""}`}>
-            {label && <span>{label}</span>}
+        <div className={"socialMediaIcons"}>
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/seanbyrd/" target="_blank">

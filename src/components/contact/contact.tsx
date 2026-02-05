@@ -14,7 +14,7 @@ const Contact = () => {
                 <div className={"mb-20"}>
                     <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={() => {}} type={CallToActionTypes.filled} />
                 </div>
-                <SocialMediaIcons showWhiteIcons={false} showSmallIcons={false}/>
+                <SocialMediaIcons showWhiteIcons={false} />
             </section>
         </section>
     )

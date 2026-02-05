@@ -7,7 +7,6 @@ import useProjects from "./useProjects.tsx";
 import spinner from "../../assets/icons/spinner.svg"
 import type ProjectListItem from './ProjectListItem.tsx';
 import TagList from "./TagList.tsx";
-import SocialMediaIcons from "../socialMedia/socialMediaIcons.tsx";
 
 const ProjectDescription = () => {
     const {url} = useParams()
@@ -70,7 +69,6 @@ const ProjectDescription = () => {
                         </ul>
                         <section className="header">
                             {project && <h1>{project.title}</h1>}
-                            <SocialMediaIcons showWhiteIcons={false} label={"Connect"} showSmallIcons={true} />
                         </section>
                         <section className={"article"}>
                             <Markdown remarkPlugins={[remarkGfm]}>
