@@ -8,15 +8,7 @@
     }
 
     .header {
-        margin-bottom: 1rem;
-
-        > * {
-            margin-bottom: var(--default-spacing);
-
-            &:last-child {
-                margin-bottom: calc(var(--default-spacing) * 2);
-            }
-        }
+        margin-bottom: calc(var(--default-spacing) * 2);
     }
 
     h1, h2, h3, h4, h5, h6 {
