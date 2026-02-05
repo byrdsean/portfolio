@@ -9,10 +9,9 @@ interface NavigationLinkList {
 
 export const navigationLinks = {
     links: [
-        { href: "#about-me", text: "About Me" },
-        { href: "#skills-and-services", text: "Skills & Services" },
-        { href: "#projects", text: "Projects" },
-        { href: "#testimonials", text: "Testimonials" },
-        { href: "#contact", text: "Contact" },
+        { href: `${import.meta.env.BASE_URL}#about-me`, text: "About Me" },
+        { href: `${import.meta.env.BASE_URL}#projects`, text: "Projects" },
+        { href: `${import.meta.env.BASE_URL}#testimonials`, text: "Testimonials" },
+        { href: `${import.meta.env.BASE_URL}#contact`, text: "Contact" },
     ]
 } as NavigationLinkList;
