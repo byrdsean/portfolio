@@ -1,7 +1,7 @@
 import type {FC, JSX} from 'react';
 import './ProjectModal.css'
 import type ProjectListItem from "./ProjectListItem.tsx";
-import TagList from "./TagList.tsx";
+import TagList from "../tagList/TagList.tsx";
 
 const ProjectModal:FC<ProjectListItem> =
 ({

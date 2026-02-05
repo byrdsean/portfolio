@@ -3,7 +3,7 @@
     flex-direction: row;
     gap: var(--default-spacing);
 
-    span {
+    .label {
         font-weight: bold;
         &::after {
             content: ":";
@@ -24,10 +24,5 @@
         padding: 0 var(--default-spacing);
         background: var(--color-accent);
         color: var(--color-content-white);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
