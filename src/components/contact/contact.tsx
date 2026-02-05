@@ -5,7 +5,7 @@ import SocialMediaIcons from '../socialMedia/socialMediaIcons';
 
 const Contact = () => {
     return (
-        <section className="contact">
+        <section className="contact-container">
             <section className="main-content">
                 <h1 id="contact">Contact</h1>
                 <p>
