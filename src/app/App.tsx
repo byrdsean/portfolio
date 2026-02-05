@@ -35,7 +35,7 @@ const App = ()=> {
             <section className={"mainSection"}>
                 <Routes>
                     <Route path={"/"} element={<Home />} />
-                    <Route path={"/projects/:url"} element={<ProjectDescription />} />
+                    <Route path={"/:url"} element={<ProjectDescription />} />
                     <Route path={"*"} element={<NotFound />} />
                 </Routes>
             </section>
