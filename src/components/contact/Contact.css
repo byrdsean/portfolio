@@ -1,7 +1,4 @@
 .contact-container {
-
-    background-color:green;
-
     .main-content {
         max-width: var(--max-width);
         padding: 0 var(--default-spacing);
