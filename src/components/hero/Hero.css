@@ -24,6 +24,10 @@
     .profile-img {
         flex: 1;
         margin: 0 auto;
+
+        img {
+            border-radius: 50%;
+        }
     }
 
     h1 {

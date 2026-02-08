@@ -2,6 +2,7 @@ import './Footer.css'
 import SocialMediaIcons from "../socialMedia/socialMediaIcons.tsx";
 import {navigationLinks} from "../navigation/navigationLinkList.tsx";
 import mapPinWhite from "../../assets/icons/map-pin-white.svg";
+import {Constants} from "../../constants/Constants.tsx";
 
 const Footer = () => {
 
@@ -34,7 +35,7 @@ const Footer = () => {
                         <h2>Contact</h2>
                         <ul>
                             <li>
-                                <a href={"mailto:byrd.sean1015@gmail.com?subject=Sean Byrd's Portfolio - Let's Connect"}>byrd.sean1015@gmail.com</a>
+                                <a href={Constants.mailto}>byrd.sean1015@gmail.com</a>
                             </li>
                             <li>
                                 <img src={mapPinWhite} alt="map-pin" />
