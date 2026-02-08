@@ -1,8 +1,31 @@
 import './Hero.css'
 import CallToActionButton from '../buttons/call-to-action/callToActionButton.tsx'
 import CallToActionTypes from "../buttons/call-to-action/callToActionTypes.tsx"
+import {Constants} from "../../constants/Constants.tsx";
+import profile from "../../assets/images/profiles/seanbyrd.jpg";
 
 const Hero = () => {
+
+    const SWE_START_DATE = new Date(2012, 1, 28);
+
+    const openResume = () => {
+        window.open(Constants.resumeLink, "_blank")
+    }
+
+    const openMailTo = () => {
+        window.location.href = Constants.mailto;
+    }
+
+    const getYearsSinceSWEStart = (): number=> {
+        // eslint-disable-next-line react-hooks/purity
+        const dateDifference = Date.now() - SWE_START_DATE.getTime();
+
+        // Approximate milliseconds in a year: 1000 * 60 * 60 * 24 * 365.25
+        // (365.25 days per year for better average accuracy)
+        const millisecondsInAYear = 31557600000;
+
+        return Math.ceil(dateDifference / millisecondsInAYear);
+    }
     return (
         <section className="hero">
             <section className="main-content">
@@ -11,15 +34,15 @@ const Hero = () => {
                     <h1>Sean Christopher Byrd</h1>
                     <p className="subtitle">Software Engineer</p>
                     <p className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Proven impact and results driven software engineer with over {getYearsSinceSWEStart()} years experience working with stakeholders to build scalable, maintainable, and profitable business solutions.
                     </p>
                     <div className="cta-group">
-                        <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={() => {}} type={CallToActionTypes.filled} />
-                        <CallToActionButton text="View Resume" iconName="document-text.svg" onClick={() => {}} />
+                        <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={openMailTo} type={CallToActionTypes.filled} />
+                        <CallToActionButton text="View Resume" iconName="document-text.svg" onClick={openResume} />
                     </div>
                 </div>
                 <div className="profile-img">
-                    <img src="https://placehold.co/640x640" alt="Sean Byrd Profile" />
+                    <img src={profile} alt="Sean Byrd Profile" />
                 </div>
             </section>
         </section>

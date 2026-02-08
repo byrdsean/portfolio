@@ -1,6 +1,7 @@
 import './SocialMediaIcons.css'
 import { type FC, useEffect, useState } from 'react';
 import type Icons from "./Icons.tsx";
+import {Constants} from "../../constants/Constants.tsx";
 
 import linkedInIconWhite from "../../assets/icons/linkedin-white.svg";
 import githubIconWhite from "../../assets/icons/github-white.svg";
@@ -55,7 +56,7 @@ const SocialMediaIcons:FC<SocialMediaIconsProps> = ({
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:byrd.sean1015@gmail.com?subject=Sean Byrd's Portfolio - Let's Connect">
+                    <a href={Constants.mailto}>
                         <img src={icons.email} alt="Email Icon" />
                     </a>
                 </li>
