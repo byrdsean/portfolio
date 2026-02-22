@@ -89,7 +89,7 @@ const ProjectDescription = () => {
                             </Markdown>
                         </section>
                     </>
-                    <TagList tags={project?.tags} showLabel={true} />
+                    <TagList tags={project?.tags} showLabel={true}/>
                 </>}
             </section>
         </section>

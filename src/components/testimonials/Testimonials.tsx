@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/set-state-in-effect */
-import { useCallback, useEffect, useState } from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import './Testimonials.css'
-import TestimonialModal from './testimonialModal';
+import TestimonialModal from './TestimonialModal.tsx';
 import type TestimonialListItem from './TestimonialListItem';
 
 const Testimonials = () => {

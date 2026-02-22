@@ -1,18 +1,18 @@
 import './App.css'
-import { useCallback, useEffect } from 'react';
-import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "../components/home/home.tsx"
-import Navigation from "../components/navigation/navigation.tsx"
-import Footer from "../components/footer/footer.tsx"
-import ProjectDescription from "../components/projects/projectDescription.tsx";
+import {useCallback, useEffect} from 'react';
+import {Route, Routes, useLocation} from "react-router-dom";
+import Home from "../components/home/Home.tsx"
+import Navigation from "../components/navigation/Navigation.tsx"
+import Footer from "../components/footer/Footer.tsx"
+import ProjectDescription from "../components/projects/ProjectDescription.tsx";
 import NotFound from "../components/notFound/NotFound.tsx";
 import ProjectLanding from "../components/projects/ProjectLanding.tsx";
 
-const App = ()=> {
+const App = () => {
 
     const SCROLL_TIMEOUT_MILLISECONDS = 200;
 
-    const { hash } = useLocation();
+    const {hash} = useLocation();
 
     const scrollToHash = useCallback(() => {
         const hashId = hash?.replace('#', '');
@@ -32,16 +32,16 @@ const App = ()=> {
 
     return (
         <>
-            <Navigation />
+            <Navigation/>
             <section className={"mainSection"}>
                 <Routes>
-                    <Route path={"/"} element={<Home />} />
-                    <Route path={"/projects/:url"} element={<ProjectDescription />} />
-                    <Route path={"/projects"} element={<ProjectLanding />} />
-                    <Route path={"*"} element={<NotFound />} />
+                    <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/projects/:url"} element={<ProjectDescription/>}/>
+                    <Route path={"/projects"} element={<ProjectLanding/>}/>
+                    <Route path={"*"} element={<NotFound/>}/>
                 </Routes>
             </section>
-            <Footer />
+            <Footer/>
         </>
     )
 }

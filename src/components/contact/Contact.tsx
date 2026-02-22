@@ -1,7 +1,7 @@
 import './Contact.css'
-import CallToActionTypes from '../buttons/call-to-action/callToActionTypes';
-import CallToActionButton from '../buttons/call-to-action/callToActionButton';
-import SocialMediaIcons from '../socialMedia/socialMediaIcons';
+import CallToActionTypes from '../buttons/call-to-action/CallToActionTypes.tsx';
+import CallToActionButton from '../buttons/call-to-action/CallToActionButton.tsx';
+import SocialMediaIcons from '../socialMedia/SocialMediaIcons.tsx';
 
 const Contact = () => {
     return (
@@ -12,9 +12,10 @@ const Contact = () => {
                     Let's Talk About <span className={"accent"}>Your Next Projects!</span>
                 </p>
                 <div className={"mb-20"}>
-                    <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={() => {}} type={CallToActionTypes.filled} />
+                    <CallToActionButton text="Let's Connect!" iconName="envelope-white.svg" onClick={() => {
+                    }} type={CallToActionTypes.filled}/>
                 </div>
-                <SocialMediaIcons showWhiteIcons={false} />
+                <SocialMediaIcons showWhiteIcons={false}/>
             </section>
         </section>
     )

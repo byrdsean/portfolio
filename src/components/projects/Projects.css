@@ -15,7 +15,7 @@
         width: fit-content;
     }
 
-    .dashboard{
+    .dashboard {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
