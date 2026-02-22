@@ -20,7 +20,7 @@ const Navigation = ()=> {
         <section className="navigation-container">
             <div className="navigation">
                 <div className="logo">
-                    <a href="/portfolio/">Sean Byrd</a>
+                    <a href={import.meta.env.BASE_URL}>Sean Byrd</a>
                 </div>
                 <div className={`links ${showNavList ? "show" : ""}`}>
                     <div className="close-navigation" onClick={hideNavList}>
