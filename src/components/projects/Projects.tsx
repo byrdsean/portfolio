@@ -1,8 +1,8 @@
 import './Projects.css'
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
-import ProjectModal from "./projectModal.tsx";
-import CallToActionButton from '../buttons/call-to-action/callToActionButton.tsx';
+import ProjectModal from "./ProjectModal.tsx";
+import CallToActionButton from '../buttons/call-to-action/CallToActionButton.tsx';
 import useProjects from "./useProjects.tsx";
 import {navigationStaticLinks} from "../navigation/NavigationStaticLink.tsx";
 
@@ -10,7 +10,7 @@ const Projects = () => {
     const NUMBER_OF_PROJECTS_TO_LOAD = 3
 
     const navigate = useNavigate();
-    const { projects, isLoading } = useProjects();
+    const {projects, isLoading} = useProjects();
     const [numberOfProjectsDisplayed, setNumberOfProjectsDisplayed] = useState(0);
 
     const showAllProjects = () => {
@@ -18,7 +18,7 @@ const Projects = () => {
     }
 
     useEffect(() => {
-        if(!isLoading && projects.length > 0) {
+        if (!isLoading && projects.length > 0) {
             // eslint-disable-next-line react-hooks/set-state-in-effect
             setNumberOfProjectsDisplayed(NUMBER_OF_PROJECTS_TO_LOAD);
         }
@@ -34,7 +34,9 @@ const Projects = () => {
                         .map((project, index) => <ProjectModal key={index} {...project} />)}
                 </div>
                 <div className="loadMoreContainer">
-                    <CallToActionButton text="All Projects" onClick={() => {showAllProjects()}} />
+                    <CallToActionButton text="All Projects" onClick={() => {
+                        showAllProjects()
+                    }}/>
                 </div>
             </section>
         </section>

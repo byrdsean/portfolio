@@ -6,6 +6,6 @@ interface NavigationStaticLink {
 }
 
 export const navigationStaticLinks = {
-    projects: {href: "projects", text: "Projects" },
-    notFound: {href: "not-found", text: "Not Found" },
+    projects: {href: "projects", text: "Projects"},
+    notFound: {href: "not-found", text: "Not Found"},
 } as NavigationStaticLink;

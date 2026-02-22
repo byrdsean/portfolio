@@ -10,9 +10,9 @@ const setBaseUrl = (url: string): string => {
 
 export const navigationLinks = {
     links: [
-        { href: setBaseUrl("#about-me"), text: "About Me" },
-        { href: setBaseUrl("projects"), text: "Projects" },
-        { href: setBaseUrl("#testimonials"), text: "Testimonials" },
-        { href: setBaseUrl("#contact"), text: "Contact" },
+        {href: setBaseUrl("#about-me"), text: "About Me"},
+        {href: setBaseUrl("projects"), text: "Projects"},
+        {href: setBaseUrl("#testimonials"), text: "Testimonials"},
+        {href: setBaseUrl("#contact"), text: "Contact"},
     ]
 } as NavigationLinkList;

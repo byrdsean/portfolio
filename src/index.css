@@ -1,65 +1,65 @@
 /* Regular */
 @font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url(/src/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/src/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
 }
 
 /* Italic (Regular Italic) */
 @font-face {
-  font-family: 'Poppins';
-  font-style: italic;
-  font-weight: 400;
-  src: url(/src/assets/fonts/Poppins/Poppins-Italic.ttf) format('truetype');
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/src/assets/fonts/Poppins/Poppins-Italic.ttf) format('truetype');
 }
 
 /* SemiBold */
 @font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url(/src/assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url(/src/assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
 }
 
 /* Bold */
 @font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: url(/src/assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/src/assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
 }
 
 :root {
-  --color-eggshell-white: #f6f6f6;
-  --color-content-white: #fffffe;
-  --color-primary: #68020f;
-  --color-accent: #f21137;
-  --color-charcoal: #030303;
-  --color-hover-filled: #68020f;
-  --color-hover-outlined: #dddddd;
-  --color-shadow: #00000033;
-  --color-gray-light: #d9d9d9;
+    --color-eggshell-white: #f6f6f6;
+    --color-content-white: #fffffe;
+    --color-primary: #68020f;
+    --color-accent: #f21137;
+    --color-charcoal: #030303;
+    --color-hover-filled: #68020f;
+    --color-hover-outlined: #dddddd;
+    --color-shadow: #00000033;
+    --color-gray-light: #d9d9d9;
 
-  --max-width: 1280px;
-  --default-spacing: 20px;
-  --default-btn-width: 200px;
-  --default-btn-height: 50px;
+    --max-width: 1280px;
+    --default-spacing: 20px;
+    --default-btn-width: 200px;
+    --default-btn-height: 50px;
 
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
-  color: var(--color-charcoal);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-eggshell-white);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-eggshell-white);
 }
 
 p {
-  font-size: 1rem;
+    font-size: 1rem;
 }

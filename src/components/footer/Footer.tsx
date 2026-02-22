@@ -1,12 +1,12 @@
 import './Footer.css'
-import SocialMediaIcons from "../socialMedia/socialMediaIcons.tsx";
-import {navigationLinks} from "../navigation/navigationLinkList.tsx";
+import SocialMediaIcons from "../socialMedia/SocialMediaIcons.tsx";
+import {navigationLinks} from "../navigation/NavigationLinkList.tsx";
 import mapPinWhite from "../../assets/icons/map-pin-white.svg";
 import {Constants} from "../../constants/Constants.tsx";
 
 const Footer = () => {
 
-    const getCurrentYear = () : number => {
+    const getCurrentYear = (): number => {
         return new Date().getUTCFullYear()
     }
 
@@ -16,9 +16,10 @@ const Footer = () => {
                 <section className="footer-content">
                     <div className="get-in-touch">
                         <h1>Get In Touch!</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
 
-                        <SocialMediaIcons showWhiteIcons={true} />
+                        <SocialMediaIcons showWhiteIcons={true}/>
 
                     </div>
                     <div className="navigation">
@@ -38,7 +39,7 @@ const Footer = () => {
                                 <a href={Constants.mailto}>byrd.sean1015@gmail.com</a>
                             </li>
                             <li>
-                                <img src={mapPinWhite} alt="map-pin" />
+                                <img src={mapPinWhite} alt="map-pin"/>
                                 <span>New York, NY</span>
                             </li>
                         </ul>

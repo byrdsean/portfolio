@@ -2,13 +2,13 @@ import {useState} from "react"
 import "./Navigation.css"
 import hamburgerIcon from "../../assets/icons/hamburger.svg"
 import closeIcon from "../../assets/icons/close.svg"
-import {navigationLinks} from "./navigationLinkList.tsx";
+import {navigationLinks} from "./NavigationLinkList.tsx";
 
-const Navigation = ()=> {
+const Navigation = () => {
 
     const [showNavList, setShowNavList] = useState(false)
 
-    const displayNavList = ()=> {
+    const displayNavList = () => {
         setShowNavList(true);
     }
 
@@ -24,7 +24,7 @@ const Navigation = ()=> {
                 </div>
                 <div className={`links ${showNavList ? "show" : ""}`}>
                     <div className="close-navigation" onClick={hideNavList}>
-                        <img src={closeIcon} alt="Close Navigation Links" />
+                        <img src={closeIcon} alt="Close Navigation Links"/>
                     </div>
                     <ul className="link-list">
                         {navigationLinks.links.map((link, index) => (
@@ -35,7 +35,7 @@ const Navigation = ()=> {
                     </ul>
                 </div>
                 <div className="hamburger-menu" onClick={displayNavList}>
-                    <img src={hamburgerIcon} alt="Navigation Menu" />
+                    <img src={hamburgerIcon} alt="Navigation Menu"/>
                 </div>
                 <div className={`content-overlay ${showNavList ? "show" : ""}`}></div>
             </div>
