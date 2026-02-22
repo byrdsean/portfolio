@@ -23,7 +23,7 @@ const ProjectModal:FC<ProjectListItem> =
             throw new Error(`Invalid project url provided: ${unParsedUrl}`);
         }
 
-        return `${baseUrl}${unParsedUrl}`;
+        return `${baseUrl}projects/${unParsedUrl}`;
     }
 
     const wrapLinkToProjectDescription = (children: JSX.Element) : JSX.Element => {

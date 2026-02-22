@@ -7,7 +7,8 @@ import useProjects from "./useProjects.tsx";
 import TagList from "../tagList/TagList.tsx";
 import spinner from "../../assets/icons/spinner.svg"
 import type ProjectListItem from './ProjectListItem.tsx';
-import {type NavigationLink, navigationLinks} from "../navigation/navigationLinkList.tsx";
+import type {NavigationLink} from "../navigation/NavigationLink.tsx";
+import {navigationStaticLinks} from "../navigation/NavigationStaticLink.tsx";
 
 const ProjectDescription = () => {
     const {url} = useParams()
@@ -22,7 +23,11 @@ const ProjectDescription = () => {
     const [projectLink, setProjectLink] = useState<NavigationLink | undefined>();
 
     const getProjectLink = useCallback(() => {
-        setProjectLink(navigationLinks.links.find(link => link.text === "Projects"));
+        const baseUrl = import.meta.env.BASE_URL.toLowerCase();
+        setProjectLink({
+            href: `${baseUrl}${navigationStaticLinks.projects.href}`,
+            text: "Projects"
+        })
     }, []);
 
     const isProjectUrl = useCallback((projectUrl: string): boolean => {
@@ -40,7 +45,7 @@ const ProjectDescription = () => {
 
         const project = projectList.find(project => isProjectUrl(project.url));
         if (!project) {
-            navigate("/not-found", {replace: true});
+            navigate(`/${navigationStaticLinks.notFound.href}`, {replace: true});
             return;
         }
 
