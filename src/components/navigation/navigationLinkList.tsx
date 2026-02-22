@@ -1,17 +1,18 @@
-export interface NavigationLink {
-    href: string;
-    text: string;
-}
+import type {NavigationLink} from "./NavigationLink.tsx";
 
 interface NavigationLinkList {
     links: NavigationLink[];
 }
 
+const setBaseUrl = (url: string): string => {
+    return !url ? url : `${import.meta.env.BASE_URL}${url}`;
+}
+
 export const navigationLinks = {
     links: [
-        { href: `${import.meta.env.BASE_URL}#about-me`, text: "About Me" },
-        { href: `${import.meta.env.BASE_URL}#projects`, text: "Projects" },
-        { href: `${import.meta.env.BASE_URL}#testimonials`, text: "Testimonials" },
-        { href: `${import.meta.env.BASE_URL}#contact`, text: "Contact" },
+        { href: setBaseUrl("#about-me"), text: "About Me" },
+        { href: setBaseUrl("projects"), text: "Projects" },
+        { href: setBaseUrl("#testimonials"), text: "Testimonials" },
+        { href: setBaseUrl("#contact"), text: "Contact" },
     ]
 } as NavigationLinkList;

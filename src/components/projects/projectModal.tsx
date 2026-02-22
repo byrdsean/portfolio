@@ -2,6 +2,7 @@ import type {FC, JSX} from 'react';
 import './ProjectModal.css'
 import type ProjectListItem from "./ProjectListItem.tsx";
 import TagList from "../tagList/TagList.tsx";
+import {navigationStaticLinks} from "../navigation/NavigationStaticLink.tsx";
 
 const ProjectModal:FC<ProjectListItem> =
 ({
@@ -23,7 +24,7 @@ const ProjectModal:FC<ProjectListItem> =
             throw new Error(`Invalid project url provided: ${unParsedUrl}`);
         }
 
-        return `${baseUrl}${unParsedUrl}`;
+        return `${baseUrl}${navigationStaticLinks.projects.href}/${unParsedUrl}`;
     }
 
     const wrapLinkToProjectDescription = (children: JSX.Element) : JSX.Element => {

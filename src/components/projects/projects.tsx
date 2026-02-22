@@ -1,24 +1,20 @@
-import { useEffect, useState } from 'react';
 import './Projects.css'
+import { useEffect, useState } from 'react';
+import {useNavigate} from "react-router-dom";
 import ProjectModal from "./projectModal.tsx";
 import CallToActionButton from '../buttons/call-to-action/callToActionButton.tsx';
 import useProjects from "./useProjects.tsx";
+import {navigationStaticLinks} from "../navigation/NavigationStaticLink.tsx";
 
 const Projects = () => {
-    const NUMBER_OF_PROJECTS_TO_LOAD = 6
+    const NUMBER_OF_PROJECTS_TO_LOAD = 3
 
+    const navigate = useNavigate();
     const { projects, isLoading } = useProjects();
     const [numberOfProjectsDisplayed, setNumberOfProjectsDisplayed] = useState(0);
 
-    const shouldShowLoadMore = (): boolean => {
-        return projects.length > numberOfProjectsDisplayed;
-    }
-
-    const loadMore = () => {
-        if(projects.length > numberOfProjectsDisplayed) {
-            const calculatedNumberForDisplay = numberOfProjectsDisplayed + NUMBER_OF_PROJECTS_TO_LOAD
-            setNumberOfProjectsDisplayed(calculatedNumberForDisplay);
-        }
+    const showAllProjects = () => {
+        navigate(navigationStaticLinks.projects.href, {replace: true});
     }
 
     useEffect(() => {
@@ -37,11 +33,9 @@ const Projects = () => {
                         .slice(0, numberOfProjectsDisplayed)
                         .map((project, index) => <ProjectModal key={index} {...project} />)}
                 </div>
-                {shouldShowLoadMore() && (
-                    <div className="loadMoreContainer">
-                        <CallToActionButton text="Load More" onClick={() => {loadMore()}} />
-                    </div>
-                )}
+                <div className="loadMoreContainer">
+                    <CallToActionButton text="All Projects" onClick={() => {showAllProjects()}} />
+                </div>
             </section>
         </section>
     );
